@@ -6,8 +6,8 @@ from modules.timer_triggered import trigger_boilerplate, mySecondTimer_blueprint
 app = func.FunctionApp(http_auth_level=func.AuthLevel.ANONYMOUS)
 
 #register the function defined in the other file
-# app.register_functions(trigger_boilerplate)
-# app.register_functions(mySecondTimer_blueprint)
+app.register_functions(trigger_boilerplate)
+app.register_functions(mySecondTimer_blueprint)
 
 #@app.route(route="SimpleHTTP01V2")
 @app.route(route="simplehttp")
